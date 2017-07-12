@@ -40,7 +40,7 @@ export default {
   color: #2c3e50;
   padding-top: 50px;
 }
-#tab{width: 100%;height: 8%;position:fixed;top:0;border-bottom: 1px solid #f4f4f4;overflow: hidden;}
+#tab{width: 100%;height: 8%;position:fixed;top:0;border-bottom: 1px solid #f4f4f4;overflow: hidden;background: #ffffff;z-index: 999;}
 h1{width: 30%;height: 100%;float: left;line-height: 50px;font-size: 20px;padding-left: 16px;text-align: left;}
 h1 a{color: #05b512;}
 #box{width:60%;height:100%;float: left;}
