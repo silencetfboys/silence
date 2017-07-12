@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import $ from 'jquery'
 import App from './App'
 import Movies from './views/Movies'
 import Book from './views/Book'
@@ -10,6 +11,7 @@ import Cast from './views/Cast'
 import Group from './views/Group'
 import Home from './views/Home'
 import Search from './views/Search'
+
 
 Vue.config.productionTip = false
 
