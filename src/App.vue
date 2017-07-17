@@ -33,13 +33,7 @@
 
 export default {
   name: 'app',
-  data(){
-  	
-  },
-  ready() {
-  	
-
-  },
+ 
   methods: {
   	
    }

@@ -11,6 +11,7 @@ import Cast from './views/Cast'
 import Group from './views/Group'
 import Home from './views/Home'
 import Search from './views/Search'
+import Icon from './components/Icon'
 
 
 Vue.config.productionTip = false
@@ -26,7 +27,8 @@ const routes = [
     { path: '/cast', component: Cast },
     { path: '/group', component: Group },
     { path: '/home', component: Home },
-    { path: '/search', component: Search }
+    { path: '/search', component: Search },
+    { path: '/icon', component: Icon}
 ]
 const router = new VueRouter({
     routes
