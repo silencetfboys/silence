@@ -30,8 +30,7 @@ import RecommendFeed from '../components/RecommendFeed'
             // var today=12;
                     console.log(today)
 	    	this.$http.jsonp("https://m.douban.com/rexxar/api/v2/recommend_feed?alt=json&next_date="+Year+"-"+(Month+1)+"-"+(today+1)).then(function(res){
-        		this.feeds_arr=res.body.recommend_feeds
-
+        		this.feeds_arr=res.body.recommend_feeds            
         		console.log(res)
       			},function(){
       		});

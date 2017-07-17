@@ -5,14 +5,15 @@
           <h1 class="title">{{this.$route.query.title}}</h1>
           <div class="user_title">
              {{body.author.name}}
+<!--              {{type.split('/')[6].slice(0)}} -->
              <span class="timestamp">{{body.create_time}}</span>
           </div>
         </section>
         <div id="note_content">
-          <div class="note_body" id="note_body">
-            <div id="content">
-              {{body.content}}
+          <div class="note_body" id="note_body" v-html="body.content">
+            
             </div>
+            <div v-for="item in photos"><img :src="item.image.large.url" alt=""></div>
           </div>
         </div>
     </div>
@@ -21,11 +22,13 @@
 
 <script>
 export default {
-  name: 'notepart',
+  name:'notepart',
   data(){
       return {
          body:"",
-
+         type:"",
+         photos:[],
+         img:'',
       }
   },
   props:{
@@ -33,11 +36,20 @@ export default {
   ,
   mounted(){
         this.$http.get("https://m.douban.com/rexxar/api/v2/note/"+this.$route.query.id).then(function(res){
+           console.log(this.type)
             this.body=res.body
+            this.type=res.url
+            this.photos=res.body.photos
             console.log(res)
-            console.log(this.$route.query.title)            
+            console.log(this.body.photos)
+                      for (var i in this.photos) {
+            var obj = this.photos[i];
+            console.log(obj.image.large.url)
+            $('#note_content').find('img').eq(i).attr('src',obj.image.large.url);
+            }            
             },function(){
-          });    
+          });
+
   }
 }
 </script>
@@ -68,5 +80,9 @@ export default {
 .header .user_title .timestamp{
     color: #ccc;
     margin-left: 5px;
+}
+.header #note_content #content{
+      font-size: 14px;
+    color: #aaa;
 }
 </style>

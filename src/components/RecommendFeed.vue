@@ -9,6 +9,7 @@
 <div class="cover":style="{backgroundImage: 'url(' + item.target.cover_url+ ')'}" v-if="url=item.target.cover_url"><div style="padding-top: 100%;"></div></div>
 					<h3>{{item.title}}</h3>
 					<p>{{item.target.desc}}</p>
+<!--            {{item.target.url}} -->
 				</div>
 				<div class="author"><span class="name">by&nbsp;{{item.target.author.name}}</span><span class="feed_label">{{item.source_cn}}</span></div>
         </router-link>
@@ -23,7 +24,6 @@ export default {
   name: 'recommend_feed',
   data(){
       return {
-
       }
   },
   props:{
@@ -35,6 +35,7 @@ export default {
       }
   },
   mounted(){
+       
   }  
 }
 </script>

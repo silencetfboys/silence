@@ -25,7 +25,8 @@ export default {
             console.log(this.$route.query.title)            
             },function(){
           });    
-  }
+  },
+  
 }
 </script>
 <style>
