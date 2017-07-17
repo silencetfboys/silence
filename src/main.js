@@ -17,6 +17,10 @@ import TwoMovies03 from './components/TwoMovies03'
 import MenuList from './components/MenuList'
 import Moviesdetails from './components/Moviesdetails'
 import Discuss from './components/Discuss'
+import Icon from './components/Icon'
+import DoubanTime from './components/DoubanTime'
+import NotePart from './components/NotePart'
+import GroupPart from './components/GroupPart'
 
 
 Vue.config.productionTip = false
@@ -38,7 +42,13 @@ const routes = [
     { path: '/home', component: Home },
     { path: '/search', component: Search },
     { path: '/moviesdetails', component: Moviesdetails },
-    { path: '/discuss', component: Discuss }
+    { path: '/discuss', component: Discuss },
+    { path: '/icon', component: Icon},
+    { path: '/home', component: Home},
+    { path: '/search', component: Search },
+    { path: '/doubantime', component: DoubanTime },
+    { path: '/notepart', component: NotePart },
+    { path: '/grouppart', component: GroupPart },
 ]
 const router = new VueRouter({
     routes
