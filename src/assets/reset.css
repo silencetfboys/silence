@@ -1,32 +1,16 @@
 @charset "utf-8";
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-ul,ol,li{
-    list-style: none;
-}
-img{
-    border: none;
-}
-a{
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-body,html{
-    height :100%;
-    width:100%;
-}
-html{
-    font-size:12px;
-}
-.clearfix{
-    content: '';
-    display: block;
-    height: 0;
-    line-height: 0;
-    visibility: hidden;
-    clear: both;
-}
+body,h1,h2,h3,p,dl,dd,ol,ul,th,td,form,fieldset,input,button,textarea{margin:0;padding:0}
+html{-webkit-text-size-adjust:none;word-wrap:break-word}
+h1,h2,h3{font-size:100%}
+ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0;empty-cells:show;font-size:inherit}
+fieldset,img{border:0}
+cite,em,s,i,b{font-style:normal}
+input,button,textarea,select{font-size:100%}
+body,input,button,textarea,select,option{font-size:normal}
+a,input,textarea{text-decoration:none;outline:0}
+li,img,label,input{vertical-align:middle}
+body{font-size:.2rem;color:#333}
+a{color:#333}
+html,body,.wrap{height: 100%}
+.f-cb:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}

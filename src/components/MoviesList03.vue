@@ -1,10 +1,10 @@
 <template>
-    <div id="moviesList">
-    	<h3>{{message.subject_collection.name}}<span><router-link to='/twoMovies01'>更多</router-link></span></h3>
-    	<div id="goodsList">
+    <div id="moviesList03">
+    	<h3>{{message.subject_collection.name}}<span><router-link to='/twoMovies03'>更多</router-link></span></h3>
+    	<div id="goodsList03">
     		<ul>
     			<li v-for="(item01,key) in message.subject_collection_items" v-if="key<8">
-    			<router-link :to="{ path:'/Moviesdetails', query: { id: item01.id } }">
+    				<router-link :to="{ path:'/Moviesdetails', query: { id: item01.id } }">
     				<img :src="item01.cover.url" alt="">
     				<p style="display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{item01.title}}</p>
     				<!--<p><span></span>{{item01.rating.value}}</p>-->
@@ -14,7 +14,7 @@
     					<p>{{item01.rating.value.toFixed(1)}}</p>
     				</div>
     				<div v-if="!item01.rating" id="score">暂无评分</div>
-    			</router-link>
+    				</router-link>
     			</li>
     		</ul>
     	</div>
@@ -24,7 +24,7 @@
 <script>
 
 export default {
-  name: 'moviesList',
+  name: 'moviesList03',
   data(){
       return {
           
@@ -46,16 +46,16 @@ export default {
 
 <style>
 	::-webkit-scrollbar{display:none;}
-	#moviesList{padding: 0 15px;}
+	#moviesList03{padding: 0 15px;}
 	h3{height: 44px;font-size: 14px;line-height: 44px;text-align: left;}
-	h3>span a{text-align: right;font-size: 14px;color: #42bd56;float: right;}
-	#goodsList{height: 170px;}
-	#goodsList ul{height: 100%;overflow-x:scroll;overflow-y:hidden;display:flex;}
-	#goodsList ul li{float: left;width: 94px;padding: 0 2px;height: 100%;}
-	#goodsList ul li img{width: 90px;height: 120px;display: block;}
+	h3>span{text-align: right;font-size: 14px;color: #42bd56;float: right;}
+	#goodsList03{height: 170px;}
+	#goodsList03 ul{height: 100%;overflow-x:scroll;overflow-y:hidden;display:flex;}
+	#goodsList03 ul li{float: left;width: 94px;padding: 0 2px;height: 100%;}
+	#goodsList03 ul li img{width: 90px;height: 120px;display: block;}
 	#scall{padding-left: 14px;}
 	#scall span{float: left;}
-	#scall .imgs{width: 8px;height: 8px;}
+	#scall .imgs{width: 8px;}
 	#scall p{font-size: 13px;float: left;}
 	#score{font-size: 8px;color: gray;}
 </style>
