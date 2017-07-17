@@ -3,8 +3,8 @@
       <ul class="quick_nav">
         <li><a href="">影院热映</a></li>
         <li><a href="">豆瓣新碟榜</a></li>
-        <li><a href="">豆瓣时间</a></li>
-        <li><a href="">使用豆瓣App</a></li>
+        <li><a href=""><router-link to="/doubantime">豆瓣时间</router-link></a></li>
+        <li><a href="https://www.douban.com/doubanapp">使用豆瓣App</a></li>
       </ul>
   </div>
 </template>

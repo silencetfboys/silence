@@ -23,9 +23,21 @@
 </template>
 
 <script>
+	var iScale = 1;
+        
+    document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=' + iScale + ',minimum-scale=' + iScale + ',maximum-scale=' + iScale + '">')
+    /*动态设置文字大小*/
+    var iWidth = document.documentElement.clientWidth;
+    document.getElementsByTagName('html')[0].style.fontSize = iWidth / 7.5+ 'px';
+
 
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+  	
+   }
+
+
 }
 </script>
 
@@ -36,7 +48,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   padding-top: 50px;
 }

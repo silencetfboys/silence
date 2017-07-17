@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import $ from 'jquery'
 import App from './App'
 import Movies from './views/Movies'
 import Book from './views/Book'
@@ -10,6 +11,10 @@ import Cast from './views/Cast'
 import Group from './views/Group'
 import Home from './views/Home'
 import Search from './views/Search'
+import DoubanTime from './components/DoubanTime'
+import NotePart from './components/NotePart'
+import GroupPart from './components/GroupPart'
+
 
 Vue.config.productionTip = false
 
@@ -23,8 +28,12 @@ const routes = [
     { path: '/book', component: Book },
     { path: '/cast', component: Cast },
     { path: '/group', component: Group },
-    { path: '/home', component: Home },
-    { path: '/search', component: Search }
+    { path: '/home', component: Home},
+    { path: '/search', component: Search },
+    { path: '/doubantime', component: DoubanTime },
+    { path: '/notepart', component: NotePart },
+    { path: '/grouppart', component: GroupPart },
+    
 ]
 const router = new VueRouter({
     routes

@@ -13,7 +13,7 @@ import RecommendFeed from '../components/RecommendFeed'
   	  	data(){
       		return {
  				myData:[],
- 				feeds_arr:[],		
+ 				feeds_arr:[],
       		}
   		},
     	components:{
@@ -21,13 +21,23 @@ import RecommendFeed from '../components/RecommendFeed'
     		RecommendFeed,
   		},
   		mounted(){
-	    	this.$http.jsonp("https://m.douban.com/rexxar/api/v2/recommend_feed").then(function(res){
-        		this.myData =res.body
+            var date=new Date();
+            var Year=date.getFullYear();
+            var Month=date.getMonth();
+            var today=date.getDate();
+            // var Year=2017;
+            // var Month=7;
+            // var today=12;
+                    console.log(today)
+	    	this.$http.jsonp("https://m.douban.com/rexxar/api/v2/recommend_feed?alt=json&next_date="+Year+"-"+(Month+1)+"-"+(today+1)).then(function(res){
         		this.feeds_arr=res.body.recommend_feeds
-        		console.log(res.body.recommend_feeds)
+
+        		console.log(res)
       			},function(){
       		});
+       
   		}
+
 }
 
 </script>
